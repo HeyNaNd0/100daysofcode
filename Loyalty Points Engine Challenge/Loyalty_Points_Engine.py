@@ -37,14 +37,16 @@ def tier_label(points):
 total_spent = 0.0
 total_points = 0
 
+# Purchase history (e.g., 3.75, 7.20, etc.)
+purchases = [3.75, 7.20, 15.00, 100.50, 250.00, 500.00]
+
+
 for amount in purchases:
     total_spent += amount
     total_points += earn_points(amount)
 
 final_tier = tier_label(total_points)
 
-# Purchase history (e.g., 3.75, 7.20, etc.)
-purchases = [3.75, 7.20, 15.00, 100.50, 250.00, 500.00]
 
 print("☕️ Loyalty Points Engine Challenge")
 print(f"Total dollars spent: ${total_spent:.2f}")
