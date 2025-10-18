@@ -1,4 +1,5 @@
-# ☕️ Loyalty Points Engine Challenge
+'''
+☕️ Loyalty Points Engine Challenge
 #
 # RULES:
 # • Each whole dollar spent earns 3 points
@@ -18,6 +19,7 @@
 #       • Total dollars spent
 #       • Total points earned
 #       • Final tier
+'''
 
 def earn_points(price):
     """Calculate loyalty points earned for a single purchase."""
@@ -34,21 +36,22 @@ def tier_label(points):
     else:
         return "Gold"
 
-total_spent = 0.0
-total_points = 0
+TOTAL_SPENT = 0.0
+TOTAL_POINTS = 0
 
 # Purchase history (e.g., 3.75, 7.20, etc.)
 purchases = [3.75, 7.20, 15.00, 100.50, 250.00, 500.00]
 
 
 for amount in purchases:
-    total_spent += amount
-    total_points += earn_points(amount)
+    TOTAL_SPENT += amount
+    TOTAL_POINTS += earn_points(amount)
 
-final_tier = tier_label(total_points)
+FINAL_TIER = tier_label(TOTAL_POINTS)
 
 
 print("☕️ Loyalty Points Engine Challenge")
-print(f"Total dollars spent: ${total_spent:.2f}")
-print(f"Total points earned: {total_points}")
-print(f"Final tier: {final_tier}")
+print(f"Total dollars spent: ${TOTAL_SPENT:.2f}")
+print(f"Total points earned: {TOTAL_POINTS}")
+print(f"Final tier: {FINAL_TIER}")
+# End-of-file (EOF)
