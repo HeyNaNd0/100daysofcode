@@ -19,5 +19,34 @@
 #       • Total points earned
 #       • Final tier
 
+def earn_points(price):
+    """Calculate loyalty points earned for a single purchase."""
+    whole_dollars = int(price)  # Get the whole dollar amount
+    points = whole_dollars * 3   # Earn 3 points per whole dollar
+    return points
+
+def tier_label(points):
+    """Determine the loyalty tier based on total points."""
+    if points < 100:
+        return "Bronze"
+    elif 100 <= points < 500:
+        return "Silver"
+    else:
+        return "Gold"
+
+total_spent = 0.0
+total_points = 0
+
+for amount in purchases:
+    total_spent += amount
+    total_points += earn_points(amount)
+
+final_tier = tier_label(total_points)
+
 # Purchase history (e.g., 3.75, 7.20, etc.)
-purchases = []
+purchases = [3.75, 7.20, 15.00, 100.50, 250.00, 500.00]
+
+print("☕️ Loyalty Points Engine Challenge")
+print(f"Total dollars spent: ${total_spent:.2f}")
+print(f"Total points earned: {total_points}")
+print(f"Final tier: {final_tier}")
