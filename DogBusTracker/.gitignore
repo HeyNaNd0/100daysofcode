@@ -1,0 +1,16 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+ReadFileLines/.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# IDE
+.vscode/
+.idea/
