@@ -31,6 +31,7 @@ newPet = {"name": "Buddy", "breed": "Golden Retriever", "pickupTime": "10:30 AM"
 if len(busDict) < MAX_SEATS:
     nextSeat = max(busDict.keys()) + 1
     busDict[nextSeat] = newPet
+<<<<<<< Updated upstream
     print("Updated Roster after pickup:")
     for seat, pet in busDict.items():
         print(f"  {pet['name']} (Seat {seat}) - Pickup Time: {pet['pickupTime']}")
@@ -42,6 +43,19 @@ else:
 #    - Remove that pet from the bus.
 #    - Print a message saying they've headed home.
 leavingSeat = 2  # Example: Pet in seat 2 is leaving early
+=======
+    print(f"""Updated Roster after pickup:
+          {busDict[1]['name']} (Seat 1) - Pickup Time: {busDict[1]['pickupTime']}
+          {busDict[2]['name']} (Seat 2) - Pickup Time: {busDict[2]['pickupTime']}
+          {busDict[3]['name']} (Seat 3) - Pickup Time: {busDict[3]['pickupTime']}
+          {busDict[4]['name']} (Seat 4) - Pickup Time: {busDict[4]['pickupTime']}
+          {busDict[nextSeat]['name']} (Seat {nextSeat}) - Pickup Time: {busDict[nextSeat]['pickupTime']}
+""")
+# 4. Ask which pet leaves early.  
+#    - Remove that pet from the bus.  
+#    - Print a message saying they’ve headed home.
+leavingSeat = int(input("Enter the seat number of the pet leaving early: "))  # Example: Pet in seat 2 is leaving early
+>>>>>>> Stashed changes
 if leavingSeat in busDict:
     leavingPet = busDict.pop(leavingSeat)
     print(f"{leavingPet['name']} has headed home early from seat {leavingSeat}.")
